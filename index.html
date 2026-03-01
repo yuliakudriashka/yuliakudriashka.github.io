@@ -1,0 +1,319 @@
+<html>
+<title>
+Курсовая работа по дисциплине "Системное администрирование"
+</title>
+<body bgcolor = "#FFFFFF">
+
+
+<!-- Таблица с заголовком-->
+<table align = "center">
+<tr>
+	<td height = "50" width = "1200">
+		<font color = "#000000">
+		<center>
+		
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face = "fantasy" size = "+4" color = "#000000">
+		<center>
+		СИСТЕМНОЕ АДМИНИСТРИРОВАНИЕ
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>	
+	<td height = "50">
+		&nbsp;
+	</td>	
+</tr>
+</table>
+
+
+
+<style>
+  .topbar{
+    width: 100%;
+    background: #DCDCDC;
+    padding: 12px 0;
+    border-bottom: 1px solid #bdbdbd;
+  }
+  .topbar-inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Times New Roman", serif;
+  }
+  .menu details{
+    position: relative;
+  }
+  .menu summary{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .menu summary::-webkit-details-marker{ display:none; }
+
+  .menu-panel{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    min-width: 520px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    z-index: 10;
+  }
+  .nav-btn{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 12px;
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    font-size: 18px;
+  }
+  .nav-btn:hover{
+    background: #ededed;
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="menu">
+      <details>
+        <summary>МЕНЮ РАЗДЕЛОВ ▾</summary>
+        <div class="menu-panel">
+          <a class="nav-btn" href="t1.html">Средства резервного копирования и восстановления данных</a>
+          <a class="nav-btn" href="t2.html">Средства установки и удаления программного обеспечения</a>
+          <a class="nav-btn" href="OC.html">Выбор операционной системы</a>
+          <a class="nav-btn" href="FC.html">Выбор файловой системы и разметка жесткого диска</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<style>
+  .content-wrap{
+    width: 1200px;
+    margin: 18px auto 0;
+    font-family: "Times New Roman", serif;
+    color: #000;
+  }
+
+  .info-section{
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    padding: 18px 18px 12px;
+  }
+
+  .info-title{
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-family: fantasy;
+  }
+
+  .info-lead{
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .card{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 12px;
+  }
+
+  .card h3{
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  .card ul{
+    margin: 0;
+    padding-left: 18px;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .quicklinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 0;
+  }
+
+  .qlink{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    padding: 10px 12px;
+    font-family: fantasy;
+  }
+
+  .qlink:hover{ background:#ededed; }
+
+  .note{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #bdbdbd;
+    background: #fafafa;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .faq{
+    margin-top: 14px;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 12px;
+  }
+
+  .faq details{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .faq summary{
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    font-family: fantasy;
+  }
+
+  .faq p{
+    margin: 10px 0 0;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 1240px){
+    .content-wrap{ width: 94%; }
+  }
+  @media (max-width: 860px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="content-wrap">
+  <section class="info-section">
+    <h2 class="info-title">Краткий гид по системному администрированию</h2>
+
+    <p class="info-lead">
+      На этом сайте собраны основные практики, которые чаще всего нужны системному администратору:
+      выбор ОС и файловой системы, установка и обслуживание ПО, а также резервное копирование и восстановление.
+      Ниже — “каркас” того, как эти темы связаны между собой в реальной работе.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>1) Базовая настройка системы (ОС и ФС)</h3>
+        <ul>
+          <li>Определяем назначение: рабочая станция, сервер, учебный ПК.</li>
+          <li>Подбираем ОС по драйверам, требованиям и поддержке.</li>
+          <li>Выбираем файловую систему и разметку диска под задачи (скорость/надёжность/совместимость).</li>
+          <li>Закладываем структуру разделов: система отдельно от данных и резервных копий.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>2) Управление программами</h3>
+        <ul>
+          <li>Устанавливаем только нужное ПО и фиксируем версии.</li>
+          <li>Следим за обновлениями: безопасность важнее “новизны”.</li>
+          <li>Удаляем лишнее, чтобы уменьшить поверхность атаки и нагрузку.</li>
+          <li>Делаем “эталонную” конфигурацию и повторяем её на других ПК.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>3) Резервное копирование и восстановление</h3>
+        <ul>
+          <li>План: что бэкапим (система/данные), куда и как часто.</li>
+          <li>Правило 3-2-1: 3 копии, 2 носителя, 1 — вне устройства.</li>
+          <li>Проверка: бэкап без тестового восстановления — почти бесполезен.</li>
+          <li>Документация: где лежат копии и как восстановить быстро.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>4) Мини-чеклист администратора</h3>
+        <ul>
+          <li>Пароли/доступы: минимум прав, отдельные учётки, резервные коды.</li>
+          <li>Обновления: ОС, браузер, антивирус/защита, критические патчи.</li>
+          <li>Мониторинг: место на диске, журналы ошибок, состояние SMART.</li>
+          <li>План на “аварии”: что делать при сбое диска/системы/ПО.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      Быстрый ориентир по сайту: начните с выбора ОС и файловой системы, затем переходите к установке ПО,
+      и только после этого закрепляйте результат настройкой резервного копирования.
+    </div>
+
+    <div class="quicklinks">
+      <a class="qlink" href="OC.html">Перейти: выбор ОС</a>
+      <a class="qlink" href="FC.html">Перейти: выбор ФС и разметка</a>
+      <a class="qlink" href="t2.html">Перейти: установка/удаление ПО</a>
+      <a class="qlink" href="t1.html">Перейти: бэкапы и восстановление</a>
+    </div>
+
+    <div class="faq">
+      <details>
+        <summary>Почему сначала ОС и ФС, а не программы?</summary>
+        <p>
+          От выбора ОС и файловой системы зависит совместимость, скорость работы с диском, удобство восстановления
+          и надёжность хранения данных. Если “основание” выбрано неправильно — дальше всё будет ломаться или усложняться.
+        </p>
+      </details>
+
+      <details>
+        <summary>Что важнее: бэкапы или “настройка идеальной системы”?</summary>
+        <p>
+          Бэкапы важнее. Идеальную систему можно собрать заново, а потерянные данные — чаще всего нет.
+          Поэтому резервное копирование нужно планировать сразу, а не “когда-нибудь потом”.
+        </p>
+      </details>
+
+      <details>
+        <summary>Как понять, что бэкап работает?</summary>
+        <p>
+          Только проверкой восстановления: восстановите пару файлов и (при возможности) протестируйте восстановление системы
+          на отдельном разделе/виртуальной машине. Без теста копия может оказаться неполной или повреждённой.
+        </p>
+      </details>
+    </div>
+  </section>
+</div>
+
+
+</body>
+</html>

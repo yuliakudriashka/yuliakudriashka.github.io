@@ -1,0 +1,298 @@
+<html>
+<title>
+Выбор опреационной системы
+</title>
+<body bgcolor = "#FFFFFF">
+<a id="top"></a>
+
+
+<!-- Таблица с заголовком-->
+<table align = "center">
+<tr>
+	<td height = "50" width = "1200">
+		<font color = "#000000">
+		<center>
+		<b></b>
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face = "fantasy" size = "+4" color = "#000000">
+		<center>
+		Выбор файловой системы и <br>разметки жесткого диска
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>	
+	<td height = "50">
+		&nbsp;
+	</td>	
+</tr>
+</table>
+
+<style>
+  /* ===== Верхняя полоса ===== */
+  .topbar{
+    width: 100%;
+    background: #DCDCDC;
+    padding: 12px 0;
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .topbar-inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Times New Roman", serif;
+  }
+
+  /* Кнопка “на главное меню” слева */
+  .home-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .home-btn:hover{ background: #ededed; }
+
+.bottom-bar{
+  width: 1200px;
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bottom-btn{
+  display: inline-block;
+  text-decoration: none;
+  font-family: fantasy;
+  color: #000;
+  padding: 10px 14px;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+
+
+  /* Выпадающее меню */
+  .menu details{
+    position: relative;
+  }
+  .menu summary{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .menu summary::-webkit-details-marker{ display:none; }
+
+  .menu-panel{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    min-width: 520px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .nav-btn{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 12px;
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    font-size: 18px;
+  }
+  .nav-btn:hover{ background: #ededed; }
+
+  /* ===== Информационный блок ===== */
+  .content-wrap{
+    width: 1200px;
+    margin: 18px auto 0;
+    font-family: "Times New Roman", serif;
+    color: #000;
+  }
+
+  .info-section{
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    padding: 18px 18px 12px;
+  }
+
+  .info-title{
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-family: fantasy;
+  }
+
+  .info-lead{
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .card{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 12px;
+  }
+
+  .card h3{
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  .card ul{
+    margin: 0;
+    padding-left: 18px;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .quicklinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 0;
+  }
+
+  .qlink{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    padding: 10px 12px;
+    font-family: fantasy;
+  }
+  .qlink:hover{ background:#ededed; }
+
+  .note{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #bdbdbd;
+    background: #fafafa;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .faq{
+    margin-top: 14px;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 12px;
+  }
+
+  .faq details{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .faq summary{
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    font-family: fantasy;
+  }
+
+  .faq p{
+    margin: 10px 0 0;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 1240px){
+    .topbar-inner{ width: 94%; }
+    .content-wrap{ width: 94%; }
+  }
+  @media (max-width: 860px){
+    .grid{ grid-template-columns: 1fr; }
+    .menu-panel{ min-width: 280px; }
+  }
+</style>
+
+<!-- ===== Верхняя полоса: кнопка “главное меню” + меню разделов ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="home-btn">← ГЛАВНОЕ МЕНЮ</a>
+
+    <div class="menu">
+      <details>
+        <summary>МЕНЮ РАЗДЕЛОВ ▾</summary>
+        <div class="menu-panel">
+          <a class="nav-btn" href="t1.html">Средства резервного копирования и восстановления данных</a>
+          <a class="nav-btn" href="t2.html">Средства установки и удаления программного обеспечения</a>
+          <a class="nav-btn" href="OC.html">Выбор операционной системы</a>
+          <a class="nav-btn" href="FC.html">Выбор файловой системы и разметка жесткого диска</a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div><br><br><br>
+
+
+<!-- Таблица с основным текстом-->
+
+<table align = "center">
+<tr>
+	<td width = "1200" valign = "top" >
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		<b>Файловая система (ФС)</b> — это способ организации, хранения и управления данными на носителе информации (жестком диске, SSD, флеш-накопителе). Она определяет, как файлы хранятся, индексируются, читаются и записываются, а также какие атрибуты и разрешения можно задать для каждого файла. Файловая система является ключевым компонентом взаимодействия пользователя и операционной системы с физическим хранилищем данных.<br><br>
+В рамках системного программного обеспечения выбор файловой системы влияет на <b>производительность, надёжность хранения, совместимость с ОС и возможности по восстановлению данных.</b><br><br>
+В связи с тем, что в рамках курсовой работы используется <b>Windows 10 Домашняя</b>, наиболее логичным и оптимальным выбором является <b>NTFS</b>. Эта файловая система:<br><br>
+- полностью поддерживается выбранной ОС;<br><br>
+- надёжна при работе с большими объёмами данных;<br><br>
+- позволяет устанавливать права доступа и защищать файлы;<br><br>
+- совместима с современными утилитами резервного копирования и восстановления.<br><br>
+Также стоит отметить, что <b>NTFS</b> используется по умолчанию при установке Windows и не требует дополнительных действий по форматированию, что упрощает настройку системы для начинающих пользователей.<br><br>
+Разметка накопителя — это процесс деления физического диска на логические разделы, каждый из которых может использоваться отдельно.<br><br>
+Для данной курсовой работы предлагается следующая схема разметки жёсткого диска.<br><br>
+		<center><img src = "FC.png" width = "800"></center><br><br><br>
+		</p>
+		</font>
+	</td>
+</tr>
+</table>
+
+<div class="bottom-bar">
+
+  <a href="#top" class="bottom-btn">
+    ↑ ВЕРНУТЬСЯ В НАЧАЛО
+  </a>
+
+  <a href="index.html" class="bottom-btn">
+    ← ГЛАВНОЕ МЕНЮ
+  </a>
+
+</div><br><br>
