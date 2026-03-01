@@ -1,0 +1,594 @@
+<html>
+<title>
+Выбор опреационной системы
+</title>
+<body bgcolor = "#FFFFFF">
+<a id="top"></a>
+
+<!-- Таблица с заголовком-->
+<table align = "center">
+<tr>
+	<td height = "50" width = "1200">
+		<font color = "#000000">
+		<center>
+		<b></b>
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face = "fantasy" size = "+4" color = "#000000">
+		<center>
+		Выбор операционной системы
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>	
+	<td height = "50">
+		&nbsp;
+	</td>	
+</tr>
+</table>
+
+<style>
+  /* ===== Верхняя полоса ===== */
+  .topbar{
+    width: 100%;
+    background: #DCDCDC;
+    padding: 12px 0;
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .topbar-inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Times New Roman", serif;
+  }
+
+  /* Кнопка “на главное меню” слева */
+  .home-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .home-btn:hover{ background: #ededed; }
+
+.bottom-bar{
+  width: 1200px;
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bottom-btn{
+  display: inline-block;
+  text-decoration: none;
+  font-family: fantasy;
+  color: #000;
+  padding: 10px 14px;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+
+.bottom-btn:hover{
+  background: #ededed;
+}
+
+  /* Выпадающее меню */
+  .menu details{
+    position: relative;
+  }
+  .menu summary{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .menu summary::-webkit-details-marker{ display:none; }
+
+  .menu-panel{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    min-width: 520px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .nav-btn{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 12px;
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    font-size: 18px;
+  }
+  .nav-btn:hover{ background: #ededed; }
+
+  /* ===== Информационный блок ===== */
+  .content-wrap{
+    width: 1200px;
+    margin: 18px auto 0;
+    font-family: "Times New Roman", serif;
+    color: #000;
+  }
+
+  .info-section{
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    padding: 18px 18px 12px;
+  }
+
+  .info-title{
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-family: fantasy;
+  }
+
+  .info-lead{
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .card{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 12px;
+  }
+
+  .card h3{
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  .card ul{
+    margin: 0;
+    padding-left: 18px;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .quicklinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 0;
+  }
+
+  .qlink{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    padding: 10px 12px;
+    font-family: fantasy;
+  }
+  .qlink:hover{ background:#ededed; }
+
+  .note{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #bdbdbd;
+    background: #fafafa;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .faq{
+    margin-top: 14px;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 12px;
+  }
+
+  .faq details{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .faq summary{
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    font-family: fantasy;
+  }
+
+  .faq p{
+    margin: 10px 0 0;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 1240px){
+    .topbar-inner{ width: 94%; }
+    .content-wrap{ width: 94%; }
+  }
+  @media (max-width: 860px){
+    .grid{ grid-template-columns: 1fr; }
+    .menu-panel{ min-width: 280px; }
+  }
+</style>
+
+<!-- ===== Верхняя полоса: кнопка “главное меню” + меню разделов ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="home-btn">← ГЛАВНОЕ МЕНЮ</a>
+
+    <div class="menu">
+      <details>
+        <summary>МЕНЮ РАЗДЕЛОВ ▾</summary>
+        <div class="menu-panel">
+          <a class="nav-btn" href="t1.html">Средства резервного копирования и восстановления данных</a>
+          <a class="nav-btn" href="t2.html">Средства установки и удаления программного обеспечения</a>
+          <a class="nav-btn" href="OC.html">Выбор операционной системы</a>
+          <a class="nav-btn" href="FC.html">Выбор файловой системы и разметка жесткого диска</a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div><br><br><br>
+
+<!-- Таблица с основным текстом-->
+
+<table align = "center">
+<tr>
+	<td width = "1200" valign = "top" >
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		<b>Операционная система (ОС)</b> — это комплекс программного обеспечения, который управляет аппаратными ресурсами компьютера и предоставляет услуги для выполнения программ. Она служит посредником между пользователем и аппаратным обеспечением, обеспечивая выполнение приложений, управление файлами, обработку данных и выполнение задач. Операционная система отвечает за управление процессами, памятью, устройствами ввода-вывода, а также за безопасность и доступ к данным. Примеры популярных операционных систем включают Windows, macOS, Linux.<br><br>
+<b>Операционная система (ОС)</b> играет центральную роль в системном администрировании, обеспечивая управление ресурсами компьютера, такими как процессор, память и устройства ввода-вывода. Она служит связующим звеном между аппаратным обеспечением и программами, позволяя им эффективно взаимодействовать. Системные администраторы используют функции ОС для настройки и оптимизации работы системы, управления пользователями и их правами доступа, а также для мониторинга производительности и диагностики возможных проблем.<br><br>
+Кроме того, операционная система обеспечивает безопасность и защиту данных, предоставляя механизмы аутентификации и контроля доступа. Системные администраторы настраивают эти функции для защиты от несанкционированного доступа и угроз. ОС также поддерживает автоматизацию задач и управление сетевыми взаимодействиями, что позволяет администраторам эффективно управлять IT-инфраструктурой. В целом, операционная система является основой для всех операций системного администрирования, обеспечивая стабильность и безопасность работы всей системы.<br><br>
+Среди наиболее распространённых семейств операционных систем можно выделить следующие:<br><br>
+1)	<b>Windows</b> — это семейство операционных систем, разработанных компанией Microsoft. Она наиболее распространена среди настольных и ноутбучных компьютеров. Windows известна своим пользовательским интерфейсом, который сочетает в себе графические элементы и меню, что делает ее доступной для пользователей с разным уровнем технической подготовки. ОС поддерживает широкий спектр программного обеспечения и игр, что делает ее популярной среди домашних пользователей и бизнесов.<br><br> 
+2)	<b>Linux</b> — это свободная и открытая операционная система, основанная на ядре Linux. Она доступна в различных дистрибутивах, таких как Ubuntu, Fedora и CentOS, каждый из которых предлагает свои особенности и целевую аудиторию. Linux известен своей стабильностью, безопасностью и гибкостью, что делает его популярным выбором для серверов, встраиваемых систем и разработчиков. <br><br>
+3)	<b>macOS</b> — это операционная система, разработанная компанией Apple для своих компьютеров Mac. Она известна своим элегантным дизайном и интуитивно понятным интерфейсом. macOS оптимизирована для работы с аппаратным обеспечением Apple, что обеспечивает высокую производительность и стабильность. macOS также предлагает высокий уровень безопасности и защиты конфиденциальности данных, включая механизмы шифрования и регулярные обновления. <br><br>
+		</p>
+		</font>
+	</td>
+</tr>
+</table>
+
+<center>
+<table width = "800" border = "1" bordercolor = "#DCDCDC">
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Характеристика</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Windows 10</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Linux (Ubuntu)</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>macOS</b>
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Разработчик</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Microsoft
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Различные сообщества/компании
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Apple Inc.
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Тип лицензии</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Коммерческая
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Открытая (бесплатная)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Коммерческая (входит в устройства)
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Интерфейс</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Графический, понятный		
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Графический/командная строка
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Графический, минималистичный
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Уровень пользовательской поддержки</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокий (широкое сообщество, техподдержка)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокий (форумы, вики, поддержка сообщества)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокий (официальная поддержка)
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Совместимость с программами</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Очень высокая
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Средняя (зависит от дистрибутива)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокая (только для macOS-программ)
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Безопасность</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Средняя (подвержена вирусам)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокая (меньше уязвимостей)
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокая
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Гибкость настройки</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Ограниченная
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Очень высокая
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Низкая
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Использование</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Домашние ПК, офис, игры
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Серверы, разработка, администрирование
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Дизайн, мультимедиа, бизнес
+		</p>
+		</font>
+	</td>
+</tr>
+</table>
+</center>
+<br><br>
+<table align = "center">
+<tr>
+	<td width = "1200" valign = "top" >
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		В рамках данной курсовой работы была выбрана <b>Windows 10 Домашняя (Home Edition)</b> как основная операционная система.<br><br>
+<b>Общая характеристика:</b><br><br>
+<b>Разработчик:</b> Microsoft<br><br>
+<b>Интерфейс: </b>графический (GUI), интуитивно понятный<br><br>
+<b>Поддерживаемая архитектура:</b> x64 и x86<br><br>
+<b>Основные компоненты:</b> проводник Windows, встроенный антивирус (Windows Defender), контроль учётных записей пользователей (UAC), встроенные средства удалённого доступа, поддержка резервного копирования.<br><br>
+<b>Причины выбора:</b><br><br>
+1.	<b>Простота использования </b>— интерфейс Windows 10 дружелюбен к начинающим пользователям, что особенно важно для студентов и в образовательных целях.<br><br>
+2.	<b>Широкая совместимость</b> — ОС поддерживает большинство современных программ, в том числе те, что рассматриваются в рамках курсовой работы.<br><br>
+3.	<b>Доступность —</b> Windows 10 Home является одной из самых распространённых и легко доступных версий Windows, часто предустанавливается на новые ПК.<br><br>
+4.	<b>Встроенные функции для резервного копирования и удалённого управления —</b> хотя они и не такие мощные, как сторонние решения, но позволяют продемонстрировать базовую функциональность ОС.<br><br>
+5.	<b>Соответствие учебным целям — </b>ОС подходит для выполнения всех заданий курсовой работы и создания учебного проекта без необходимости сложной настройки.<br><br>
+
+		</p>
+		</font>
+	</td>
+</tr>
+</table>
+
+<div class="bottom-bar">
+
+  <a href="#top" class="bottom-btn">
+    ↑ ВЕРНУТЬСЯ В НАЧАЛО
+  </a>
+
+  <a href="index.html" class="bottom-btn">
+    ← ГЛАВНОЕ МЕНЮ
+  </a>
+
+</div><br>

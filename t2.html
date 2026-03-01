@@ -1,0 +1,887 @@
+<html>
+<title>
+Установка и удаление
+</title>
+<body bgcolor = "#FFFFFF">
+<a id="top"></a>
+
+<!-- Таблица с заголовком-->
+<table align = "center">
+<tr>
+	<td height = "50" width = "1200">
+		<font color = "#000000">
+		<center>
+		<b></b>
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td>
+		<font face = "fantasy" size = "+4" color = "#000000">
+		<center>
+		Средства установки и удаления <br> программного обеспечения
+		</center>
+		</font>
+	</td>
+</tr>
+<tr>	
+	<td height = "50">
+		&nbsp;
+	</td>	
+</tr>
+</table>
+
+<style>
+  /* ===== Верхняя полоса ===== */
+  .topbar{
+    width: 100%;
+    background: #DCDCDC;
+    padding: 12px 0;
+    border-bottom: 1px solid #bdbdbd;
+  }
+
+  .topbar-inner{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: "Times New Roman", serif;
+  }
+
+  /* Кнопка “на главное меню” слева */
+  .home-btn{
+    display: inline-block;
+    text-decoration: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .home-btn:hover{ background: #ededed; }
+
+.bottom-bar{
+  width: 1200px;
+  margin: 40px auto 20px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.bottom-btn{
+  display: inline-block;
+  text-decoration: none;
+  font-family: fantasy;
+  color: #000;
+  padding: 10px 14px;
+  border: 1px solid #bdbdbd;
+  background: #fff;
+}
+
+
+  /* Выпадающее меню */
+  .menu details{
+    position: relative;
+  }
+  .menu summary{
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    font-family: fantasy;
+    color: #000;
+    padding: 10px 14px;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+  }
+  .menu summary::-webkit-details-marker{ display:none; }
+
+  .menu-panel{
+    position: absolute;
+    top: 44px;
+    left: 0;
+    min-width: 520px;
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    z-index: 10;
+  }
+
+  .nav-btn{
+    display: block;
+    text-decoration: none;
+    color: #000;
+    padding: 10px 12px;
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    font-size: 18px;
+  }
+  .nav-btn:hover{ background: #ededed; }
+
+  /* ===== Информационный блок ===== */
+  .content-wrap{
+    width: 1200px;
+    margin: 18px auto 0;
+    font-family: "Times New Roman", serif;
+    color: #000;
+  }
+
+  .info-section{
+    background: #fff;
+    border: 1px solid #bdbdbd;
+    box-shadow: 0 6px 18px rgba(0,0,0,.08);
+    padding: 18px 18px 12px;
+  }
+
+  .info-title{
+    margin: 0 0 10px;
+    font-size: 28px;
+    font-family: fantasy;
+  }
+
+  .info-lead{
+    margin: 0 0 14px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .card{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 12px;
+  }
+
+  .card h3{
+    margin: 0 0 8px;
+    font-size: 20px;
+  }
+
+  .card ul{
+    margin: 0;
+    padding-left: 18px;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .quicklinks{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0 0;
+  }
+
+  .qlink{
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    border: 1px solid #bdbdbd;
+    background: #fff;
+    padding: 10px 12px;
+    font-family: fantasy;
+  }
+  .qlink:hover{ background:#ededed; }
+
+  .note{
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-left: 4px solid #bdbdbd;
+    background: #fafafa;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .faq{
+    margin-top: 14px;
+    border-top: 1px solid #DCDCDC;
+    padding-top: 12px;
+  }
+
+  .faq details{
+    border: 1px solid #DCDCDC;
+    background: #f7f7f7;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+  }
+
+  .faq summary{
+    cursor: pointer;
+    user-select: none;
+    font-size: 18px;
+    font-family: fantasy;
+  }
+
+  .faq p{
+    margin: 10px 0 0;
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  @media (max-width: 1240px){
+    .topbar-inner{ width: 94%; }
+    .content-wrap{ width: 94%; }
+  }
+  @media (max-width: 860px){
+    .grid{ grid-template-columns: 1fr; }
+    .menu-panel{ min-width: 280px; }
+  }
+</style>
+
+<!-- ===== Верхняя полоса: кнопка “главное меню” + меню разделов ===== -->
+<div class="topbar">
+  <div class="topbar-inner">
+
+    <a href="index.html" class="home-btn">← ГЛАВНОЕ МЕНЮ</a>
+
+    <div class="menu">
+      <details>
+        <summary>МЕНЮ РАЗДЕЛОВ ▾</summary>
+        <div class="menu-panel">
+          <a class="nav-btn" href="t1.html">Средства резервного копирования и восстановления данных</a>
+          <a class="nav-btn" href="t2.html">Средства установки и удаления программного обеспечения</a>
+          <a class="nav-btn" href="OC.html">Выбор операционной системы</a>
+          <a class="nav-btn" href="FC.html">Выбор файловой системы и разметка жесткого диска</a>
+        </div>
+      </details>
+    </div>
+
+  </div>
+</div><br><br><br>
+
+
+<!-- Таблица с основным текстом-->
+<table align = "center">
+<tr>
+	<td width = "300" height = "80" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		<center>
+		<b>Программа 1:</b> <br> <a href = "#p1"> <font color = "#000000"> IObit Uninstaller </font></center></a></font>
+	</td>
+	<td height = "80" width = "150">
+		&nbsp;
+	</td>	
+	<td width = "300" height = "80" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		<center>
+		<b>Программа 2:</b> <br> <a href = "#p2"><font color = "#000000"> Ninite </font></center></a></font>
+	</td>
+	<td height = "80" width = "150">
+		&nbsp;
+	</td>	
+	<td width = "300" height = "80" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		<center>
+		<b>Программа 3:</b> <br> <a href = "#p3"><font color = "#000000"> ZipSoft </font></center></a></font>
+	</td>
+</tr>
+
+<tr>	
+	<td height = "50" colspan = "5">
+		&nbsp;
+	</td>	
+</tr>
+
+<tr>
+	<td width = "300" height = "80">
+		&nbsp;
+	</td>
+	<td height = "80" width = "150">
+		&nbsp;
+	</td>	
+	<td width = "300" height = "80" bgcolor = "#DCDCDC">
+		<a href = "#S">
+		<font color = "#000000" size = "+2">
+		<p align = "justify">
+		<center>
+		<b>Сравнительный анализ</b>
+		</font></a>
+	</td>
+	<td height = "80" width = "150">
+		&nbsp;
+	</td>
+	<td width = "300" height = "80">
+		&nbsp;
+	</td>
+</tr>
+
+
+<tr>	
+	<td height = "50" colspan = "5">
+		&nbsp;
+	</td>	
+</tr>
+<tr>
+	
+		<td colspan = "5">
+		<font color = "#000000">
+		<a name = "p1">&nbsp;</a><br><h1><b> IObit Uninstaller</b></h1>
+
+		<center><img src = "IO23.png" align = "middle"></center>
+
+		<p align = "justify">
+		Описание программы: <br>
+		IObit Uninstaller — это мощное программное обеспечение, предназначенное для эффективного удаления установленных приложений и очистки системы от остатков. Основная функция программы заключается в глубоком удалении не только самих программ, но и всех связанных с ними файлов, папок и записей реестра, что позволяет избежать накопления ненужных данных на диске. Утилита поддерживает массовое удаление, что позволяет пользователям одновременно избавляться от нескольких приложений, а также предлагает возможность мониторинга установок, что обеспечивает полный контроль над изменениями, вносимыми новыми программами. Кроме того, IObit Uninstaller предоставляет инструменты для управления расширениями браузеров и удаления нежелательных плагинов.</p>
+
+		<p align = "justify">
+		Установить программу можно тут -> <a href = "https://ru.iobit.com/advanceduninstaller.php">Установить</a>.</p>
+
+
+
+		<p align = "justify">
+		После успешной установки программы открывается стартовое окно. Оно разделено на две части: в правой части располагаются вкладки с соответствующей их названию информацией, а в левой части представлен список программ, которые установленны на Ваш компьютер. (Рис. 1.1).<br>
+		<center><img src = "IO1.png" width = "700"></center></p>
+		<center>Рисунок 1.1 - Стартовое окно программы.</center><br>
+
+		<p align = "justify">
+		Для демострации работы программы было установленно несколько дополнительных программ, такие как: Googl Chrome и Notepad++. Чтобы удалить нужное программное обеспечение следует нажать на серый квадрат слева от иконки программы. После нажатия должна появиться зеленая галочка, как продемонстрированно на рисунке (Рис. 1.2).
+
+		<center><img src = "IO5.png" width = "700"></center></p>
+		<center>Рисунок 1.2 - Выделение программы для дальнейшей деинстоляции.</center><br>
+
+		<p align = "justify">
+		Далее нужно навести курсор и нажать на зеленую кнопку "Деинсталлировать", которая находится в правом верхнем углу экрана. После нажатия откроется окно с донастройкой деинсталляции. Нужно пометить галочками два пункта: "Создать точку восстановления перед удалением" (Создается копия последнего обновления программы, для возможного восстановления) и "Автоматически удалять все остаточные файлы" (Удаляются все остаточные фалы, которые могут мешать дальнейшей работе компьютера). После обозначения дополнительных пунктов нажимаем на кнопку "Деинсталлировать" (Рис. 1.3).
+
+		<center><img src = "IO6.png" width = "700"></center></p>
+		<center>Рисунок 1.3 - Окно донастройки деинсталляции.</center><br>
+
+		<p align = "justify">
+		После нажатия на кнопку "Деисталлировать" программа запустит удаление выбранного программного обеспечения (Рис 1.4).
+
+		<center><img src = "IO7.png" width = "700"></center></p>
+		<center>Рисунок 1.4 - Окно деинсталляции.</center><br>
+
+		<p align = "justify">
+		По завершению деинсталляции программа выведет окно, в котором говорится о том, что выбранная нами программа была успешно удалена (Рис. 1.5).
+
+		<center><img src = "IO8.png" width = "700"></center></p>
+		<center>Рисунок 1.5 - Окно успешного удаления выбранной программы.</center><br>
+
+		<p align = "justify">
+		На Рисунке 1.6 показанно, что теперь Googl Chrome не числится в списке установленных программ.
+
+		<center><img src = "IO9.png" width = "700"></center></p>
+		<center>Рисунок 1.6 - Google Chrome удален.</center><br>
+
+		<p align = "justify">
+		Так же с помощью IObit Uninstaller можно удалять сразу несколько программ. Для демонстрации были дополнительно установленны такие программы, как: AnyDesk и Zoom Workplace. Чтобы удалить сразу несколько программ нужно нажать на серые квадраты слева от иконок приложений, чтобы они пометились зелеными галочками. Для примера я выбираю следующие программы: AnyDesk, Zoom Workplace и Notepad++. После этого нажимаем на кнопку "Деинсталлировать" (Рис. 1.7).
+
+		<center><img src = "IO11.png" width = "700"></center></p>
+		<center>Рисунок 1.7 - Выделение нескольких программ для дальнейшей деинсталляции</center>
+
+		<p align = "justify">
+		Далее, как и в примере с удалением одной программы, выводится окно с донастройкой деинсталляции, где так же следует отметить галочками предложеные пункты, и подтверждаем деинсталляцию (Рис. 1.8).
+		
+		<center><img src = "IO12.png" width = "700"></center></p>
+		<center>Рисунок 1.8 - Донастройка деинсталляции нескольких программ.</center>
+
+		<p align = "justify">
+		Запускается процесс удаления программ (Рис 1.9).
+		
+		<center><img src = "IO13.png" width = "700"></center></p>
+		<center>Рисунок 1.9 - Процесс удаления программ.</center>
+
+		<p align = "justify">
+		После завершения работы программы выводится окно с сообщением об успешном удалении 3-х программ (Рис. 1.10).
+
+		<center><img src = "IO16.png" width = "700"></center></p>
+		<center>Рисунок 1.10 - Программы успешно удалены.</center>
+
+		<p align = "justify">
+		Теперь удаленные программы не числятся в списке имеющихся программ на компьютере (Рис. 1.11).
+		
+		<center><img src = "IO17.png" width = "700"></center></p>
+		<center>Рисунок 1.11 - AnyDesk, Zoom Workplace и Notepad++ - удалены.</center><br><br>
+
+		<p align = "justify">
+		Еще одной возможностью данной программы является то, что с ее помощью можно удалять "мусорные" программы Windows, то есть те, которые, например, лично Вам не нужны для работы с компьютером. Для этого нужно перейти во вкладку "Приложения Windows" и как в прошлых примерах пометить желаемые программы. В моем случае это Xbox, Xbox Game Pad и Xbox Game Speech Window. Нажимаем на кнопку "Деинсталлировать" (Рис. 1.12).
+		
+		<center><img src = "IO18.png" width = "700"></center></p>
+		<center>Рисунок 1.12 - Выбор программ Windows для удаления.</center><br><br>
+
+		<p align = "justify">
+		Выпадает окно с донастройкой деинсталляции, в котором помечаем галочками предложенные два пункта (Рис. 1.13).
+		
+		<center><img src = "IO19.png" width = "700"></center></p>
+		<center>Рисунок 1.13 - Донастройка деинсталляции программ Windows.</center><br><br>
+
+		<p align = "justify">
+		Далее запускается сам процесс деинсталляции (Рис. 1.14).
+		
+		<center><img src = "IO20.png" width = "700"></center></p>
+		<center>Рисунок 1.14 - Процесс деинсталляции программ Windows.</center><br><br>
+
+		<p align = "justify">
+		После завершения выпадает окно с уведомлением об успешном удалении программ (Рис 1.15).
+		
+		<center><img src = "IO21.png" width = "700"></center></p>
+		<center>Рисунок 1.15 - Уведомление об успещном удалении программ Windows.</center><br><br>
+
+		<p align = "justify">
+		Список программ Windows без удаленных Xbox, Xbox Game Pad и Xbox Game Speech Window (Рис. 1.16).
+		
+		<center><img src = "IO22.png" width = "700"></center></p>
+		<center>Рисунок 1.16 - Xbox, Xbox Game Pad и Xbox Game Speech Window - удалены.</center><br><br>
+
+
+		
+		Таким образом была продемонстрированна работа приложения <b>IObit Uninstaller</b> (написать о минусах и плюсах и тд)<br><br><br><br><br>
+
+
+		<a name = "p2">&nbsp;</a><br><font size = "+2"><b> Ninite </b></font><br>
+		
+		<center><img src = "ninite1.png" align = "middle"></center>
+
+		<p align = "justify">
+		Описание программы: <br>
+		Ninite — это удобное и эффективное программное обеспечение, предназначенное для автоматизации процесса установки и обновления популярных приложений на операционных системах Windows. Основная функция Ninite заключается в том, что пользователи могут выбрать сразу несколько программ из обширного списка, включая веб-браузеры, медиаплееры, антивирусы, утилиты для работы с изображениями и многие другие. После выбора нужных приложений Ninite генерирует специальный установочный файл, который автоматически загружает и устанавливает выбранные программы без необходимости взаимодействия пользователя с каждым отдельным установщиком. Это значительно экономит время и упрощает процесс настройки нового компьютера или обновления существующего.</p>
+
+<p align = "justify">Кроме того, Ninite обеспечивает автоматическое обновление выбранных приложений, что позволяет пользователям быть уверенными в том, что они используют последние версии программного обеспечения с актуальными функциями. Программа также игнорирует нежелательные дополнения и панели инструментов, которые могут предлагаться при установке, гарантируя чистую и безопасную установку. </p>
+
+		<p align = "justify">
+		Чтобы начать работать с утилитой Ninite следует пройти на <a href = "https://ninite.com/?utm">сайт</a> и, прокрутив вниз, можно будет увидеть весь перечень программ, предлагаемых для установки с помощью Ninite. (Рис. 2.1).		
+		<center><img src = "ninite2.png" width = "700"></center></p>
+		<center>Рисунок 2.1 - Список предлагаемых для установки программ.</center><br>
+
+		<p align = "justify">
+		Следубщим шагом является выбор программ, которые Вы хотите установить. В моем случае я буду устанавливать следующие: Chrome, Zoom, Notepad++, Blender, 7-Zip и AnyDask (Рис. 2.2). Хочется отметить, что так же можно устанавливать только одну программу. Это делается по аннологии с примером установки сразу нескольких программ.
+
+		<center><img src = "ninite4.png" width = "700"></center></p>
+		<center>Рисунок 2.2 - Выбор программ из списка.</center><br>
+
+		<p align = "justify">
+		Далее нужно опуститься еще чуть ниже, где после выбора нужных программ будет активированна кнопка "Get Your Ninite" (Рис. 2.3). Нажимем на эту кнопку.
+
+		<center><img src = "ninite3.png" width = "700"></center></p>
+		<center>Рисунок 2.3 - Кнопка "Get Your Ninite".</center><br>
+
+		<p align = "justify">
+		После нажатия Вас переведет на страницу с указанным списокм программ, которые вы выбрали и дальнейшими шагами. В первом шаге говорится о том, что наш установщик Ninite скоро будет загружен. В противном случае нужно повторить попытку загрузки, перейдя по ссылке. Во втором шаге говорится, что нужно запустить установщик Ninite и расслабиться, так как Ninite установит все самостоятельно без Вашего участия. В третьем (необязательном) шаге предлагается поделиться данной утилитой с друзьями (Рис. 2.4).
+		
+		<center><img src = "ninite5.png" width = "700"></center></p>
+		<center>Рисунок 2.4 - Шаги установки.</center><br>
+
+		<p align = "justify">
+		Далее в звгрузках у вас появится файл .exe, который нужно запустить (Рис. 2.5).
+		
+		<center><img src = "ninite6.png" width = "700"></center></p>
+		<center>Рисунок 2.5 - Запуск файла .exe.</center><br>
+
+		<p align = "justify">
+		После запуска данного файла автомотически начнется установка всех выбранных программ в порядке очереди, выбранной Ninite. Например, на рисунке 2.6 показан процесс установки одной из программ - Chrome. По такому же принципу Ninite устанавливает и остальные программы.
+		
+		<center><img src = "ninite7.png" width = "700"></center></p>
+		<center>Рисунок 2.6 - Установка Chrome.</center><br>
+
+		<p align = "justify">
+		По оканачнии работы утилиты выводится окно с уведомлением об успешной установке программ и нажимаем "Close" (Рис. 2.7).
+		
+		<center><img src = "ninite12.png" width = "700"></center></p>
+		<center>Рисунок 2.7 - Finished.</center><br>
+
+		<p align = "justify">
+		На рисунке 2.8 продемострированно, что выбранные нами программы установились и находятся на рабочем столе компьютера.
+		
+		<center><img src = "ninite13.png" width = "700"></center></p>
+		<center>Рисунок 2.8 - Установленные программы на рабочем столе.</center><br>
+
+		<p align = "justify">
+		Таким образом, была продемострированна работа программы <b>Ninite.</b>
+		
+		<a name = "p3">&nbsp;</a><br><font size = "+2"><b> ZipSoft </b></font><br>
+
+		<center><img src = "ZS10.png" align = "middle"></center>
+
+		<p align = "justify">
+		Описание программы: <br>
+		- ZipSoft — удобный инструмент для автоматической установки и обновления программ на Windows.<br>
+		- Коллекция ZipSoft насчитывает более 700 программ — они регулярно обновляются до последних версий.<br>
+		- В программе ZipSoft собрано лучшее ПО со всего мира. Все дистрибутивы проверены антивирусами и абсолютно безопасны.<br>
+		- Установка программ через ZipSoft происходит в пару кликов — достаточно выбрать подходящие программы и запустить пакетную установку. </p>
+
+		<p align = "justify">
+		Установить программу можно тут -> <a href = "https://ru.zip-soft.net/">Установить</a>.</p>
+
+		<p align = "justify">
+		После установки и запуска программы ZipSoft откроется окно со списком имеющихсы программ на компьютере на данный момент. Чтобы установить дополнительные программы нужно нажать на кнопку "Добавить" в правом нижнем углу экрана (Рис. 3.1).	
+		<center><img src = "ZS1.png" width = "700"></center></p>
+		<center>Рисунок 3.1 - Начальное окно программы.</center><br>
+
+		<p align = "justify">
+		После нажатия на кнопку "Добавить" откроется окно, которое разделено на две части: в правой части указаны группы программ, по которым можно искать нужные Вам программные обеспечения, а в левой - находится непосредственно список программ. Так же в левом верхнем углу имеется поисковая строка, с помощью которой так же можно искать нужноt ПО для установки (Рис. 3.2).
+	
+		<center><img src = "ZS2.png" width = "700"></center></p>
+		<center>Рисунок 3.2 - Списки программ.</center><br>
+
+		<p align = "justify">
+		Для того, чтобы выбрать программы для дальнейшей установки следует нажимать на знак плюса в правой части строки программы. После нажатия выбранная программы будет вынесена вверх в отдел "Выбранное". Для примера я выбрала пять программ: 7-Zip, Google Chrome, ScreenShooter, Zoom, Telegram Desktop. После выбора программ нужно нажать на зеленую кнопку "Скачать" в правом нижнем углу экрана (Рис. 3.3).
+	
+		<center><img src = "ZS3.png" width = "700"></center></p>
+		<center>Рисунок 3.3 - Выбранные программы.</center><br>
+
+		<p align = "justify">
+		После нажатия на кнопку "Скачать" запустится установка программ в порядке очереди, которую определяет сам ZipSoft (Рис. 3.4).
+	
+		<center><img src = "ZS5.png" width = "700"></center></p>
+		<center>Рисунок 3.4 - Процесс установки программ.</center><br>
+
+		<p align = "justify">
+		В процессе установки некоторых программ будут выскакивать окна, в которых нужно самостоятельно указывать нужные параметры для установки. Так произошло при установке Telegram Desktop (Рис. 3.5).
+	
+		<center><img src = "ZS6.png" width = "700"></center></p>
+		<center>Рисунок 3.5 - Самостоятельнй выбор параметров (Выбор языка приложения).</center><br>
+
+		<p align = "justify">
+		После завершения установки программа ZipSoft выдает окно с сообщением об успешной установке выбранных программ. Чтобы посмотреть список имеющихсы теперь программ на компьютере нужно нажать на зеленую кнопку "В "Мои программы"" в правом нижнем углу экрана (Рис. 3.6).
+	
+		<center><img src = "ZS7.png" width = "700"></center></p>
+		<center>Рисунок 3.6 - Успешно установленно.</center><br>
+
+		<p align = "justify">
+		После нажатия на кнопку будет показан список всех программ, которые теперь есть на компьютере (Рис. 3.7).
+	
+		<center><img src = "ZS8.png" width = "700"></center></p>
+		<center>Рисунок 3.7 - Список всех программ.</center><br>
+
+		<p align = "justify">
+		На рисунке 3.8 продемонтрирован рабочий стол компьютера с установленными программами.
+	
+		<center><img src = "ZS9.png" width = "700"></center></p>
+		<center>Рисунок 3.8 - Рабочий стол с программами.</center><br>
+
+		<p align = "justify">
+		Таким образом, была продемонстрированна работы программы <b>ZipSoft</b><br>
+		<a name = "S">&nbsp;</a><br><h1><b> <center> Сравнительный анализ </center> </b></h1></font>
+
+<center>
+<table width = "800" border = "1" bordercolor = "#DCDCDC">
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Критерий</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>IObit Uninstaller</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Ninite</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Zipsoft</b>
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Основная функция</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Удаление программ
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Автоматическая установка ПО
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Установка программ
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Простота использования</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Высокая
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Очень высокая
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Средняя
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Реклама/доп. предложения</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Есть в бесплатной версии		
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет данных
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Поддержка удаления</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>БПоддержка установки</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Набор поддерживаемых программ</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Любые программы
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Ограниченный список популярных
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Любые программы (зависит от версии)
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Подходит для новичков</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+</tr>
+<tr>
+	<td height = "100" bgcolor = "#DCDCDC">
+		<font color = "#000000" size = "+1">
+		<p align = "center">
+		<b>Требования к интернету</b>
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Нет
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Да
+		</p>
+		</font>
+	</td>
+	<td height = "100">
+		<font color = "#000000" size = "+1">
+		<p align = "justify">
+		Зависит от функционала
+		</p>
+		</font>
+	</td>
+</tr>
+
+</table><br>
+
+		<p align = "justify">
+		<b>Вывод:</b> из-за того, что ни одна из рассмотренных программ не обеспечивает одновременно и удаление и установку ПО, то оптимальным сочетанием для эффективного управления программным обеспечением является использование <b>IObit Uninstaller</b> вместе с <b>Zipsoft</b>. IObit Uninstaller обеспечивает надёжное и глубокое удаление программ, включая очистку остаточных файлов и записей в реестре, что критично для поддержания чистоты и производительности системы. Его понятный интерфейс и мощный функционал делают процесс деинсталляции доступным даже для неопытных пользователей.<br><br>
+В то же время Zipsoft дополняет эту связку возможностями по установке и управлению пакетами программ, что расширяет общие возможности по работе с ПО. Несмотря на то, что Zipsoft менее известен и требует некоторого опыта, он предлагает удобные инструменты для пакетной установки и обновления, которые отсутствуют в IObit Uninstaller. Такое сочетание позволяет покрыть полный цикл управления программами — от установки до качественного удаления — без необходимости использовать множество разрозненных утилит. 
+<br><br><br>
+
+
+
+		</font>
+
+		<p align = "justify">
+		Краткая демострация программ представленна в презентации:<br><br>
+
+ 		<meta charset="UTF-8" />
+   		<style>
+   			body, html {
+      				margin: 0; padding: 0; height: 100%;
+    			}
+    			.pdf-container {
+      				width: 100%;
+     				height: 70vh; /* высота окна браузера */
+      				border: none;
+    			}
+  		</style>
+		<embed src="Средства установки и удаления ПО.pdf" type="application/pdf" class="pdf-container" />
+
+
+	</td>
+</tr>
+</table>
+
+<div class="bottom-bar">
+
+  <a href="#top" class="bottom-btn">
+    ↑ ВЕРНУТЬСЯ В НАЧАЛО
+  </a>
+
+  <a href="index.html" class="bottom-btn">
+    ← ГЛАВНОЕ МЕНЮ
+  </a>
+
+</div><br><br>
+
+</body>
+</html>
